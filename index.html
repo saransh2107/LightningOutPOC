@@ -18,7 +18,7 @@
           console.log('checking',cmp);
           setTimeout(() => {
             // Access LWC elements
-            const lwcElement = document.getElementById("#targetElement #testbtn-1");
+            const lwcElement = document.querySelector("#targetElement #testbtn-1");
             console.log(lwcElement);
             if (lwcElement) {
                 lwcElement.variant = "base"; // Customize style
