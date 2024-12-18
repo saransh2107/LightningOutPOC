@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<HTML lang="en">
+<script src="https://vmb--vmdirecdev.sandbox.my.site.com/secureAccess/lightning/lightning.out.js"></script>
+<div data-lightning-out="true"></div>
+<script>
+  const targetElement = document.querySelector("[data-lightning-out]");
+  $Lightning.use(
+    "c:LtgOutApplication", // name of the Lightning Out app
+    function () {
+      // Callback once framework and app loaded
+      $Lightning.createComponent(
+        "c:createLead", // top-level component of your app
+        {}, // attributes to set on the component when created
+        targetElement, // the DOM location to insert the component
+        function (cmp) {
+          // callback when component is created and active on the page
+        },
+      );
+    },
+    "https://vmb--vmdirecdev.sandbox.my.site.com/secureAccess", // Site endpoint
+  );
+</script>
+</HTML>
