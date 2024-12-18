@@ -14,6 +14,7 @@
         targetElement, // the DOM location to insert the component
         function (cmp) {
           // callback when component is created and active on the page
+          console.log('checking',cmp);
           setTimeout(() => {
             // Access LWC elements
             const lwcElement = document.getElementById("#testbtn-1");
