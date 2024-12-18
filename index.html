@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <HTML lang="en">
 <script src="https://vmb--vmdirecdev.sandbox.my.site.com/LightningOutPOC/lightning/lightning.out.js"></script>
-<div data-lightning-out="true"></div>
+<div id="testDiv" data-lightning-out="true"></div>
 <script>
   const targetElement = document.querySelector("[data-lightning-out]");
   $Lightning.use(
@@ -16,7 +16,7 @@
           // callback when component is created and active on the page
           setTimeout(() => {
             // Access LWC elements
-            const lwcElement = document.querySelector("#testbtn-1");
+            const lwcElement = document.querySelector("#testDiv #testbtn-1");
             console.log(lwcElement);
             if (lwcElement) {
                 lwcElement.variant = "base"; // Customize style
