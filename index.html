@@ -14,6 +14,14 @@
         targetElement, // the DOM location to insert the component
         function (cmp) {
           // callback when component is created and active on the page
+          setTimeout(() => {
+            // Access LWC elements
+            const lwcElement = document.querySelector("testbtn");
+            console.log(lwcElement);
+            if (lwcElement) {
+                lwcElement.variant = "base"; // Customize style
+            }
+        }, 500); // Delay to ensure rendering
         },
       );
     },
